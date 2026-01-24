@@ -1,12 +1,13 @@
-import { toast } from "react-toastify";
+import HeroSlider from "../components/HeroSlider";
+import EditorsPick from "../components/EditorsPick";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 export default function HomePage() {
   return (
-    <button
-      onClick={() => toast.success("Toast çalışıyor ✅")}
-      className="p-4 bg-green-500 text-white"
-    >
-      Toast Test
-    </button>
+    <>
+      <HeroSlider />
+      <EditorsPick />
+      <FeaturedProducts />
+    </>
   );
 }

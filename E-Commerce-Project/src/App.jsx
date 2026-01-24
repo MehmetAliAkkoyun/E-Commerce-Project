@@ -1,7 +1,17 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Header from "./layout/Header";
+import HomePage from "./pages/HomePage";
+
 export default function App() {
   return (
-    <div style={{ padding: 40 }}>
-      <h1>EKRAN GELDİ</h1>
-    </div>
+    <BrowserRouter>
+    
+      <Header />
+
+   
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </BrowserRouter>
   );
 }
