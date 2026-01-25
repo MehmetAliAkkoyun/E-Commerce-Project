@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram, Facebook, Twitter, User, Search, ShoppingCart, Heart } from "lucide-react";
+import { Phone, Mail, Instagram, Facebook, Twitter, User, Search, ShoppingCart, Heart, Youtube } from "lucide-react";
 
 
 export default function Header() {
@@ -26,6 +26,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <span>Follow Us :</span>
             <Instagram size={14} />
+            <Youtube size={14} />
             <Facebook size={14} />
             <Twitter size={14} />
           </div>
@@ -41,7 +42,18 @@ export default function Header() {
 
   <nav className="hidden md:flex items-center gap-6 text-sm text-gray-500 w-1/2">
     <a href="#">Home</a>
-    <a href="#">Shop</a>
+    <a href="#" className="flex items-center gap-1">
+    <span>Shop</span>
+    <svg
+      viewBox="0 0 20 20"
+      className="w-3.5 h-3.5 translate-y-[1px]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path d="M6 8l4 4 4-4" />
+    </svg>
+  </a>
     <a href="#">About</a>
     <a href="#">Blog</a>
     <a href="#">Contact</a>

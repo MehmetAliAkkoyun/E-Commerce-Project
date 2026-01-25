@@ -10,10 +10,11 @@ export default function HeroSlider() {
 
         <div className="hidden md:block absolute inset-y-0 right-0 w-[55%]">
           <img
-            src={heroImg}
-            alt="Hero"
-            className="h-full w-full object-cover object-left"
-          />
+  src={heroImg}
+  alt="Hero"
+  className="h-full w-full object-cover object-left -translate-x-16"
+/>
+
         </div>
 
        
