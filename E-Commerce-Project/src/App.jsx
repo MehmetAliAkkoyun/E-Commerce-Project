@@ -5,10 +5,7 @@ import HomePage from "./pages/HomePage";
 export default function App() {
   return (
     <BrowserRouter>
-    
       <Header />
-
-   
       <Switch>
         <Route exact path="/" component={HomePage} />
       </Switch>

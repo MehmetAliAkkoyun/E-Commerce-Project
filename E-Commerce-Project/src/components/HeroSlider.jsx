@@ -1,6 +1,7 @@
 import heroImg from "../assets/shop-hero-1-product-slide-1.jpg";
 
 
+
 export default function HeroSlider() {
   return (
     <section className="relative w-full bg-cyan-500 text-white overflow-hidden">
@@ -50,5 +51,7 @@ export default function HeroSlider() {
         <div className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-8 w-16 h-1 bg-white/90" />
       </div>
     </section>
+
+    
   );
 }
