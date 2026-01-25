@@ -12,7 +12,7 @@ export default function HeroSlider() {
           <img
   src={heroImg}
   alt="Hero"
-  className="h-full w-full object-cover object-left -translate-x-16"
+  className="h-full w-full object-cover object-left -translate-x-80"
 />
 
         </div>
