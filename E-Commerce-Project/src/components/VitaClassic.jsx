@@ -3,7 +3,7 @@ import manImg from "../assets/man-on-green-background.png";
 export default function VitaClassic() {
   return (
     <section className="relative w-full bg-[#23856D] overflow-hidden">
-  
+      {/* ✅ MOBILE */}
       <div className="md:hidden relative mx-auto px-6 pt-14 pb-0 text-white text-center">
         <p className="text-xs tracking-[0.25em] font-bold">SUMMER 2020</p>
 
@@ -19,7 +19,6 @@ export default function VitaClassic() {
 
         <div className="mt-7 text-2xl font-bold">$16.48</div>
 
-     
         <div className="mt-6 flex items-center justify-between">
           <button
             className="w-12 h-12 flex items-center justify-center text-white/90 select-none"
@@ -40,17 +39,18 @@ export default function VitaClassic() {
           </button>
         </div>
 
-        <div className="relative mt-10 pb-[360px]">
-        
-        </div>
+        {/* ✅ burada sadece boşluğu biraz artırıyoruz */}
+        <div className="relative mt-10 pb-[420px]"></div>
 
+        {/* ✅ adamı biraz aşağı indiriyoruz (yazıdan kopuyor) */}
         <img
           src={manImg}
           alt="Vita Classic Product"
-          className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[320px] h-auto object-contain pointer-events-none"
+          className="absolute left-1/2 -translate-x-1/2 bottom-[-18px] w-[320px] h-auto object-contain pointer-events-none"
         />
       </div>
 
+      {/* ✅ DESKTOP (aynı kalsın) */}
       <div className="hidden md:block relative h-[520px] md:h-[650px]">
         <div className="relative mx-auto max-w-6xl px-6 h-full">
           <div className="relative z-10 h-full flex items-center">

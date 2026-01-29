@@ -3,42 +3,31 @@ import womenImg from "../assets/women.png";
 import accessoriesImg from "../assets/accessories.png";
 import kidsImg from "../assets/kids.png";
 
-function PickCard({ img, label, variant }) {
+function PickCard({ img, label, variant = "small" }) {
   const sizeClasses = {
-    men: "w-[500px] h-[520px]",
-    women: "w-[380px] h-[520px]",
-    small: "w-[240px] h-[250px]",
+    men: "w-full md:w-[500px] h-[600px]",
+    women: "w-full md:w-[380px] h-[600px]",
+    small: "w-full md:w-[240px] h-[290px]",
   };
 
   return (
     <div
-      className={`relative overflow-hidden bg-[#F6F6F6] ${sizeClasses[variant]}`}
+      className={`relative overflow-hidden ${sizeClasses[variant]}`}
     >
       <img
         src={img}
         alt={label}
-        className="w-full h-full object-cover object-center"
+        className="w-full h-full object-cover object-top"
       />
 
       <div className="absolute left-6 bottom-6">
-        <button
-          className="
-            bg-white
-            px-10 py-3
-            text-s
-            font-extrabold
-            tracking-[0.15em]
-            text-[#252B42]
-          "
-        >
+        <button className="bg-white px-10 py-3 text-sm font-extrabold tracking-[0.15em] text-[#252B42]">
           {label}
         </button>
       </div>
     </div>
   );
 }
-
-
 
 
 export default function EditorsPick() {
@@ -52,13 +41,14 @@ export default function EditorsPick() {
         Problems trying to resolve the conflict between
       </p>
 
-      <div className="mt-14 flex gap-8">
-        <PickCard img={menImg} label="MEN" big align="left" />
-        <PickCard img={womenImg} label="WOMEN" big align="left" />
+      
+      <div className="mt-14 w-full max-w-6xl px-6 flex flex-col md:flex-row gap-8">
+        <PickCard img={menImg} label="MEN" variant="men" />
+        <PickCard img={womenImg} label="WOMEN" variant="women" />
 
-        <div className="flex flex-col gap-8">
-          <PickCard img={accessoriesImg} label="ACCESSORIES" />
-          <PickCard img={kidsImg} label="KIDS" />
+        <div className="flex flex-col gap-8 w-full md:w-auto">
+          <PickCard img={accessoriesImg} label="ACCESSORIES" variant="small" />
+          <PickCard img={kidsImg} label="KIDS" variant="small" />
         </div>
       </div>
     </section>

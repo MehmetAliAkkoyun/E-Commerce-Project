@@ -4,7 +4,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import VitaClassic from "../components/VitaClassic";
 import NeuralUniverse from "../components/NeuralUniverse";
 import FeaturedPosts from "../components/FeaturedPosts";
-import Footer from "../components/Footer";
+
 
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
       <VitaClassic />
       <NeuralUniverse />
       <FeaturedPosts />
-      <Footer />
+    
     </>
   );
 }
