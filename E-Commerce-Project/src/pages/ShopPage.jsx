@@ -73,9 +73,24 @@ function ViewIconList() {
 
 function CategoryCard({ img, title, count }) {
   return (
-    <div className="relative w-full overflow-hidden bg-[#F6F6F6] h-[180px] md:h-[220px]">
-      <img src={img} alt={title} className="h-full w-full object-cover" />
+    <div
+      className="
+        relative w-full overflow-hidden bg-[#F6F6F6]
+        h-[320px] md:h-[220px]
+      "
+    >
+      <img
+        src={img}
+        alt={title}
+        className="
+          h-full w-full
+          object-cover object-top   
+          md:object-cover md:object-center
+        "
+      />
+
       <div className="absolute inset-0 bg-black/25" />
+
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         <p className="text-sm font-bold">{title}</p>
         <p className="text-xs font-bold opacity-90">{count}</p>
@@ -83,6 +98,8 @@ function CategoryCard({ img, title, count }) {
     </div>
   );
 }
+
+
 
 function ColorDots() {
   return (
@@ -139,14 +156,17 @@ export default function ShopPage() {
       <section className="w-full bg-[#FAFAFA]">
         <div className="max-w-6xl mx-auto px-6 py-6">
          
-          <div className="md:hidden">
-            <div className="flex items-center justify-between">
-              <h1 className="text-2xl font-bold text-[#252B42]">Shop</h1>
-              <p className="text-xs font-bold text-[#737373]">
-                Home &nbsp; &gt; &nbsp; Shop
-              </p>
-            </div>
+          
+        <div className="md:hidden">
+          <div className="flex flex-col items-center gap-4 py-2">
+            <h1 className="text-2xl font-bold text-[#252B42]">Shop</h1>
+
+            <p className="text-xs font-bold text-[#737373]">
+              Home &nbsp; &gt; &nbsp; Shop
+            </p>
           </div>
+        </div>
+
 
           <div className="hidden md:flex items-center justify-between">
             <h1 className="text-2xl font-bold text-[#252B42]">Shop</h1>
@@ -155,7 +175,8 @@ export default function ShopPage() {
             </p>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+
             {categories.map((c, i) => (
               <CategoryCard key={i} {...c} />
             ))}
