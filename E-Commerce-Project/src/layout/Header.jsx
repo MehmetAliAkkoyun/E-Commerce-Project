@@ -60,7 +60,10 @@ export default function Header() {
 
             <a href="#">About</a>
             <a href="#">Blog</a>
-            <a href="#">Contact</a>
+            <Link to="/contact" onClick={() => setOpen(false)}>
+  Contact
+</Link>
+
             <a href="#">Pages</a>
           </nav>
 
@@ -121,13 +124,8 @@ export default function Header() {
                   Blog
                 </a>
 
-                <a
-                  href="#"
-                  onClick={() => setOpen(false)}
-                  className="text-[#252B42] font-semibold"
-                >
-                  Contact
-                </a>
+                <Link to="/contact">Contact</Link>
+
 
                 <a href="#" onClick={() => setOpen(false)}>
                   Pages
