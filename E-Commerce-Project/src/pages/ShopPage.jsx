@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import hooli from "../assets/brands/hooli.svg";
 import lyft from "../assets/brands/lyft.svg";
@@ -224,9 +225,11 @@ export default function ShopPage() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-14">
-            {products.map((p, i) => (
-              <ProductCard key={i} {...p} />
-            ))}
+           {products.map((p, i) => (
+  <Link key={i} to={`/product/${i + 1}`} className="block">
+    <ProductCard {...p} />
+  </Link>
+))}
           </div>
 
           <div className="mt-16 flex justify-center">
