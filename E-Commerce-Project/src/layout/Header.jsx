@@ -58,7 +58,7 @@ export default function Header() {
               Shop <ChevronDown size={16} className="mt-[1px]" />
             </Link>
 
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
             <a href="#">Blog</a>
             <Link to="/contact" onClick={() => setOpen(false)}>
   Contact
@@ -70,7 +70,7 @@ export default function Header() {
           <div className="flex items-center gap-5 text-blue-500">
             <div className="hidden md:flex items-center gap-2 text-sm">
               <User size={16} />
-              <span>Login / Register</span>
+              <Link to="/signup">Login / Register</Link>
             </div>
 
             <div className="hidden md:flex items-center gap-5 text-sm">
